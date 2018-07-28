@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style>
+		ul {
+			list-style: none;
+			display: flex;
+			position: relative;
+		}
+
+		li {
+			flex: 1;
+			margin: 2rem 0;
+		}
+
+		.box {
+			border: 1px solid #9e8fdd;
+			background: #f0edff;
+			text-align: center;
+			margin: 0 1rem;
+			padding: 4rem 6rem;
+		}
+
+		.arrow {
+			border: none;
+			display: none;
+		}
+
+		/* 5 or more items display to the left and with more margin, 
+except the first item*/
+
+		li:first-child:nth-last-child(n + 6)~li {
+			margin-left: 2rem;
+		}
+
+		/* add a scroll indicator pseudo element, absolutely positioned */
+
+		li:first-child:nth-last-child(n + 6)~.arrow {
+			display: block;
+			position: sticky;
+			height: 2rem;
+			min-width: 3rem;
+			top: 0;
+			right: 0;
+			background: deepskyblue;
+		}
+
+		/* Unrelated Styling */
+
+		body {
+			font-family: monospace;
+			font-size: 1.5rem;
+		}
+
+		ul {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			margin-bottom: -15px;
+			margin-bottom: 2rem;
+			border-bottom: 1px solid;
+		}
+
+		ul::-webkit-scrollbar {
+			display: none;
+		}
+
+		h2 {
+			font-size: 2rem;
+			margin: 1rem;
+			text-align: center;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h2>Less tha 5 items? Center it!</h2>
+	<ul>
+		<li>
+			<div class="box">1</div>
+		</li>
+		<li>
+			<div class="box">2</div>
+		</li>
+		<li>
+			<div class="box">3</div>
+		</li>
+		<button class="right-arrow arrow">Next</button>
+	</ul>
+
+	<h2>More than 5 items? Carousel it!</h2>
+	<ul>
+		<li>
+			<div class="box">1</div>
+		</li>
+		<li>
+			<div class="box">2</div>
+		</li>
+		<li>
+			<div class="box">3</div>
+		</li>
+		<li>
+			<div class="box">4</div>
+		</li>
+		<li>
+			<div class="box">5</div>
+		</li>
+		<button class="arrow">Next</button>
+	</ul>
+</body>
+
+</html>

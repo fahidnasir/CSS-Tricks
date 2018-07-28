@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style>
+		body {
+			text-align: center;
+			font-family: monospace;
+			font-size: 1.2rem;
+		}
+
+		ul {
+			list-style: none;
+			border: 1px solid #9e8fdd;
+			background-color: #f0edff;
+			padding: 2rem;
+			width: 500px;
+			margin: 0 auto;
+		}
+
+		/* 5 or more items display next to each other */
+
+		li:first-child:nth-last-child(n + 5),
+		li:first-child:nth-last-child(n + 5)~li {
+			background-color: #9e8fdd;
+			margin-top: 2px;
+		}
+
+		/* Adds semicolon after each item except the first item */
+
+		li:first-child:nth-last-child(n + 5)~li::before {
+			content: '* ';
+		}
+
+		/* Adds semicolon on first item */
+
+		li:first-child:nth-last-child(n + 5)::before {
+			content: '$ ';
+		}
+	</style>
+</head>
+
+<body>
+	<h1>No Style if Items are less than 5</h1>
+	<ul>
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Forth Item</li>
+	</ul>
+
+	<h1>5 or more Items</h1>
+	<ul>
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Forth Item</li>
+		<li>Fifth Item</li>
+		<li>Sixth Item</li>
+	</ul>
+</body>
+
+</html>

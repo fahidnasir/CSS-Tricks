@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style>
+		body>div {
+			background-color: aquamarine;
+			height: 60px;
+			padding-top: 10px;
+			margin: 10px 0;
+		}
+
+		body>div>div {
+			border: 2px solid gray;
+			display: inline-table;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			margin: 0 10px;
+		}
+
+		.example1 div:last-child {
+			background-color: blueviolet;
+		}
+		.example1 div:first-child {
+			background-color: blue;
+		}
+		.example1 div:nth-child(8) {
+			background-color: tomato;
+		}
+
+		/* Select all elements after 4th */
+		.example2 div:nth-child(n+4) {
+			background-color: blueviolet;
+		}
+
+		/* Select every 2nd elements after 3rd */
+		.example3 div:nth-child(2n+3) {
+			background-color: blueviolet;
+		}
+
+		/* Select every odd element */
+		.example4 div:nth-child(odd) {
+			background-color: blueviolet;
+		}
+
+		/* Select every even element */
+		.example5 div:nth-child(even) {
+			background-color: blueviolet;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="example1">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="example2">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="example3">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="example4">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="example5">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+
+</html>
